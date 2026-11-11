@@ -2,7 +2,7 @@
 import "../index.css";
 import Tache from "./Tache";
 
-function ListeTaches({ taches }) {
+function ListeTaches({ taches,onBasculer, onSupprimer }) {
   return (
     <ul className="liste-taches">
       {taches.length === 0 ? (
@@ -11,8 +11,11 @@ function ListeTaches({ taches }) {
         taches.map((tache) => (
           <Tache
             key={tache.id}
+            id={tache.id}
             titre={tache.titre}
             terminee={tache.terminee}
+            onBasculer={onBasculer}
+            onSupprimer={onSupprimer}
           />
         ))
       )}
