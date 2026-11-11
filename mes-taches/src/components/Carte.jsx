@@ -1,11 +1,10 @@
 import "../index.css";
-
-function Carte({ titre, children }) {
+function Carte({ titre, children   }) {
   return (
     <section className="carte">
       <h2>{titre}</h2>
       {children}
-    </section>
+          </section>
   )
 }
 
