@@ -16,7 +16,7 @@ function App() {
   titre="Mes tâches"
   sousTitre="Organise ton travail"
 />
-      <Carte titre="Ma liste">
+      <Carte titre="Compteur">
           <ListeTaches taches={TACHES} />
       </Carte>
       <Pied auteur="abc def" />
