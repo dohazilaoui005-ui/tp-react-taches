@@ -1,25 +1,21 @@
 
 import "../index.css";
+import Tache from "./Tache";
 
-function ListeTaches() {
+function ListeTaches({ taches }) {
   return (
     <ul className="liste-taches">
-
-      <li className="tache">
-        <span className="titre">run</span>
-        <button>Supprimer</button>
-      </li>
-
-      <li className="tache terminee">
-        <span className="titre">read</span>
-        <button>Supprimer</button>
-      </li>
-
-      <li className="tache">
-        <span className="titre">swim</span>
-        <button>Supprimer</button>
-      </li>
-
+      {taches.length === 0 ? (
+        <p className="vide">Aucune tâche à afficher.</p>
+      ) : (
+        taches.map((tache) => (
+          <Tache
+            key={tache.id}
+            titre={tache.titre}
+            terminee={tache.terminee}
+          />
+        ))
+      )}
     </ul>
   );
 }
