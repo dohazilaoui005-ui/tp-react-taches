@@ -2,7 +2,7 @@ import Entete from './components/Entete.jsx'
 import ListeTaches from './components/ListeTaches.jsx'
 import Pied from './components/Pied.jsx'
 import Carte from './components/Carte.jsx'
-
+import { useState } from 'react'
 function App() {
   const TACHES_INITIALES = [
   { id: 1, titre: 'Installer Node.js et Vite', terminee: true },
@@ -29,7 +29,7 @@ function supprimerTache(id) {
   sousTitre="Organise ton travail"
 />
       <Carte titre="Compteur">
-          <ListeTaches taches={TACHES} onBasculer={basculerTache} onSupprimer={supprimerTache} />
+          <ListeTaches taches={taches} onBasculer={basculerTache} onSupprimer={supprimerTache} />
       </Carte>
       <Pied auteur="abc def" />
     </div>
